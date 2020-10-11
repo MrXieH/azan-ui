@@ -1,11 +1,22 @@
 <template>
-  <h1>hi</h1>
   <router-view></router-view>
 </template>
 
-<script>
-
+<script lang="ts">
+import { provide, ref } from 'vue'
+import router from './router'
 export default {
-  name: 'App'
+  name: 'App',
+  setup() {
+    const width = document.documentElement.clientWidth
+    const asideVisible = ref(width <= 500 ? false : true)
+    provide('asideVisible', asideVisible)
+    router.afterEach(() => {
+      if (width <= 500) {
+        asideVisible.value = false;
+      }
+    })
+  }
 }
 </script>
+<style></style>
