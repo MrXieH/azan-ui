@@ -1,7 +1,7 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="boom-dialog-overlay" @click="closeOnClickOverlay"></div>
+      <div class="boom-dialog-overlay" @click="onClickOverlay"></div>
       <div class="boom-dialog-wrapper">
         <div class="boom-dialog">
             <header>
@@ -22,10 +22,10 @@
 </template>
 
 <script lang="ts">
-import Button from "./Button.vue";
+import Button from "../Button/Button.vue";
 export default {
   components: {
-    Button,
+    Button
   },
   props: {
     visible: {

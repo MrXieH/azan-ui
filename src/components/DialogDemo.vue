@@ -11,26 +11,43 @@
       <div>hi2</div>
     </template>
   </Dialog>
+  <Button @click="showDialog">show</Button>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
-import Dialog from "../lib/Dialog.vue";
+import { ref, h } from "vue";
+import Dialog from "../lib/Dialog/Dialog.vue";
+import Button from "../lib/Button/Button.vue";
+import { openDialog } from '../lib/Dialog/openDialog'
 export default {
   components: {
     Dialog,
+    Button
   },
   setup() {
-    const visible = ref(false)
+    const visible = ref(false);
     const toggle = () => {
-      visible.value = !visible.value
+      visible.value = !visible.value;
+    };
+    const ok = () => {};
+    const showDialog = () => {
+      openDialog({
+        title: '标题',
+        content: '内容',
+        ok() {
+          console.log('ok')
+        },
+        cancel() {
+          console.log('cancel')
+        }
+      })
     }
-    const ok = () => {}
     return {
       visible,
       toggle,
-      ok
-    }
-  }
+      ok,
+      showDialog
+    };
+  },
 };
 </script>
