@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ checked: value }" @click="toggle">
+  <button class='boom-switch' :class="{ 'boom-checked': value }" @click="toggle">
       <span></span>
   </button>
 </template>
@@ -21,10 +21,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss"> 
     $h: 22px;
     $h2: $h - 4px;
-    button{
+    .boom-switch{
         height: $h;
         width: $h*2;
         border: none;
@@ -37,7 +37,7 @@ export default {
         &:active {
             > span {width: $h2 + 4px;}
         }
-        &.checked{
+        &.boom-checked{
             background: #1890ff;
             > span {
                 left: calc(100% - #{$h2} - 2px);
