@@ -11,13 +11,7 @@
       <div class="boom-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="boom-tabs-content">
-      <div
-        v-for="(c, index) in defaults"
-        :key="index"
-        class="boom-tabs-content-item"
-        :class="{selected: c.props.title === selected }">
-        <component :is="c" />
-      </div>
+      <component :is="current" :key="current.props.title" />
     </div>
   </div>
 </template> 
@@ -42,10 +36,12 @@ export default {
 
       const { left: left1 } = container.value.getBoundingClientRect()
       const { left: left2 } = selectedItem.value.getBoundingClientRect()
+      console.log('left1', left1)
+      console.log('left1', left1)
       const left = left2 - left1
       indicator.value.style.left = left + 'px'
     }
-    // watchEffect(x)
+
     onMounted(x)
     onUpdated(x)
 
@@ -62,13 +58,18 @@ export default {
       context.emit('update:selected', title)
     }
 
+    const current = computed(() => {
+      return defaults.find(tag => tag.props.title === props.selected)
+    })
+
     return {
       defaults,
       titles,
       select,
       selectedItem,
       indicator,
-      container
+      container,
+      current
     }
   }
 }
@@ -107,12 +108,6 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
-    &-item {
-      display: none;
-      &.selected {
-        display: block;
-      }
-    }
   }
 }
 </style>
