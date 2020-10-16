@@ -22,6 +22,7 @@ $green: #02bcb0;
 $border-radius: 4px;
 $color: #007974;
 .topnavAndBanner {
+  clip-path: ellipse(80% 60% at 50% 40%);
   background: linear-gradient(90deg, rgba(36,240,229,1) 0%, rgba(39,231,230,1) 100%, rgba(0,212,255,1) 100%);
 }
 .banner {
