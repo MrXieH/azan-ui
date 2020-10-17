@@ -36,8 +36,6 @@ export default {
 
       const { left: left1 } = container.value.getBoundingClientRect()
       const { left: left2 } = selectedItem.value.getBoundingClientRect()
-      console.log('left1', left1)
-      console.log('left1', left1)
       const left = left2 - left1
       indicator.value.style.left = left + 'px'
     }
