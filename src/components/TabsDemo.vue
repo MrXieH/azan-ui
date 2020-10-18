@@ -2,7 +2,7 @@
   <div>
     <p>Tabs 实例</p>
     <h1>示例1</h1>
-    <Tabs v-model:selected="x">
+    <Tabs v-model:selected="current">
       <Tab title="导航1">内容1</Tab>
       <Tab title="导航2">内容2</Tab>
     </Tabs>
@@ -18,9 +18,9 @@ export default {
     Tab
   },
   setup() {
-    const x = ref('导航1')
+    const current = ref('导航1')
     return {
-      x
+      current
     }
   }
 }

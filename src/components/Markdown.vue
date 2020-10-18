@@ -6,17 +6,13 @@
 import { ref } from 'vue'
 export default {
   props: {
-    path: {
+    content: {
       type: String,
       required: true
     }
   },
   setup(props) {
-    const content = ref<string>(null)
-    // 懒加载，会出现空白最好给个loading
-    import(props.path).then(result => {
-      content.value = result.default
-    })
+    const content = props.content
     return {
       content
     }
