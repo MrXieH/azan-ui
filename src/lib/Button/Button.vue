@@ -1,9 +1,9 @@
 <template>
   <button
-    class="boom-button"
+    class="azan-button"
     :class="classes"
     :disabled="disabled">
-    <span v-if="loading" class="boom-loadingIndicator"></span>
+    <span v-if="loading" class="azan-loadingIndicator"></span>
     <slot />
   </button>
 </template>
@@ -37,9 +37,9 @@ export default {
         const { theme, size, level } = props
         const classes = computed(() => {
             return {
-                [`boom-theme-${theme}`]: theme,
-                [`boom-size-${size}`]: size,
-                [`boom-level-${level}`]: level
+                [`azan-theme-${theme}`]: theme,
+                [`azan-size-${size}`]: size,
+                [`azan-level-${level}`]: level
             }
         })
         return {
@@ -57,7 +57,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.boom-button {
+.azan-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -86,7 +86,7 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.boom-theme-link {
+  &.azan-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -95,7 +95,7 @@ $grey: grey;
       color: lighten($blue, 10%);
     }
   }
-  &.boom-theme-text {
+  &.azan-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -104,18 +104,18 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
-  &.boom-size-big {
+  &.azan-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
-  &.boom-size-small {
+  &.azan-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
-  &.boom-theme-button {
-    &.boom-level-main {
+  &.azan-theme-button {
+    &.azan-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -125,7 +125,7 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
-    &.boom-level-danger {
+    &.azan-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -136,8 +136,8 @@ $grey: grey;
       }
     }
   }
-  &.boom-theme-link {
-    &.boom-level-danger {
+  &.azan-theme-link {
+    &.azan-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -145,15 +145,15 @@ $grey: grey;
       }
     }
   }
-  &.boom-theme-text {
-    &.boom-level-main {
+  &.azan-theme-text {
+    &.azan-level-main {
       color: $blue;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
-    &.boom-level-danger {
+    &.azan-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -161,7 +161,7 @@ $grey: grey;
       }
     }
   }
-  &.boom-theme-button {
+  &.azan-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -170,13 +170,13 @@ $grey: grey;
       }
     }
   }
-  &.boom-theme-link, &.boom-theme-text {
+  &.azan-theme-link, &.azan-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
-  > .boom-loadingIndicator{
+  > .azan-loadingIndicator{
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -185,10 +185,10 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: boom-spin 1s infinite linear;
+    animation: azan-spin 1s infinite linear;
   }
 }
-@keyframes boom-spin {
+@keyframes azan-spin {
   0%{transform: rotate(0deg)} 
   100%{transform: rotate(360deg)} 
 }

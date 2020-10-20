@@ -1,12 +1,12 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="boom-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="boom-dialog-wrapper">
-        <div class="boom-dialog">
+      <div class="azan-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="azan-dialog-wrapper">
+        <div class="azan-dialog">
             <header>
               <slot name="title"></slot>
-              <span @click="close" class="boom-dialog-close"></span>
+              <span @click="close" class="azan-dialog-close"></span>
             </header>
             <main>
                 <slot name="content"></slot>
@@ -76,7 +76,7 @@ export default {
 <style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
-.boom-dialog {
+.azan-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);

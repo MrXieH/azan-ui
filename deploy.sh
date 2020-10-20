@@ -5,7 +5,7 @@ git init
 git add .
 git commit -m 'update'
 git branch -M master
-git remote add origin git@github.com:MrXieH/boom-ui-website.git
+git remote add origin git@github.com:MrXieH/azan-ui-website.git
 git push -f -u origin master
 cd -
-echo https://mrxieh.github.io/boom-ui-website/index.html
+echo https://mrxieh.github.io/azan-ui-website/index.html

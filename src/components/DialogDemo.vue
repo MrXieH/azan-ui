@@ -18,7 +18,7 @@
 import { ref, h } from "vue";
 import Dialog from "../lib/Dialog/Dialog.vue";
 import Button from "../lib/Button/Button.vue";
-import { openDialog } from '../lib/Dialog/openDialog'
+import { openDialog } from '../lib/Dialog/openDialog';
 export default {
   components: {
     Dialog,

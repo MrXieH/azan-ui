@@ -10,8 +10,8 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'Boom',
-    file: 'dist/lib/Boom.js',
+    name: 'azan',
+    file: 'dist/lib/azan.js',
     format: 'umd',
     plugins: [terser()]
   },

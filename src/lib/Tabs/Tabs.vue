@@ -1,16 +1,16 @@
 <template>
-  <div class="boom-tabs">
-    <div class="boom-tabs-nav" ref="container">
+  <div class="azan-tabs">
+    <div class="azan-tabs-nav" ref="container">
       <div
-        class="boom-tabs-nav-item"
+        class="azan-tabs-nav-item"
         v-for="(t,index) in titles"
         :key="index"
         :class="{selected: t === selected}"
         @click="select(t)"
         :ref="el => { if (t === selected) selectedItem = el }">{{t}}</div>
-      <div class="boom-tabs-nav-indicator" ref="indicator"></div>
+      <div class="azan-tabs-nav-indicator" ref="indicator"></div>
     </div>
-    <div class="boom-tabs-content">
+    <div class="azan-tabs-content">
       <component :is="current" :key="current.props.title" />
     </div>
   </div>
@@ -30,7 +30,7 @@ export default {
     const indicator = ref<HTMLDivElement>(null)
     const container = ref<HTMLDivElement>(null)
 
-    const x = () => {
+    watchEffect(() => {
       const { width } = selectedItem.value.getBoundingClientRect()
       indicator.value.style.width = width  + 'px'
 
@@ -38,10 +38,7 @@ export default {
       const { left: left2 } = selectedItem.value.getBoundingClientRect()
       const left = left2 - left1
       indicator.value.style.left = left + 'px'
-    }
-
-    onMounted(x)
-    onUpdated(x)
+    }, { flush: 'post' })
 
     const defaults = context.slots.default()
     defaults.forEach(tag => {
@@ -77,7 +74,7 @@ export default {
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
-.boom-tabs {
+.azan-tabs {
   &-nav {
     display: flex;
     color: $color;

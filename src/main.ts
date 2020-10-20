@@ -1,4 +1,4 @@
-import './lib/boom.scss'
+import './lib/azan.scss'
 import './index.scss'
 import 'github-markdown-css/github-markdown.css'
 import { createApp } from 'vue'
