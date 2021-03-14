@@ -5,8 +5,7 @@ export const openDialog = (options) => {
   const {
     title,
     content,
-    ok,
-    cancel
+    ok
   } = options
 
   const div = document.createElement('div')
@@ -23,7 +22,6 @@ export const openDialog = (options) => {
         {
           visible: true,
           ok,
-          cancel,
           'onUpdate:visible': (newVisible) => {
             if (newVisible === false) {
               close()

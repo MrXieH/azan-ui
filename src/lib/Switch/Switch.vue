@@ -5,14 +5,15 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
 export default {
     props: {
-        value: Boolean
+        value: Boolean,
+        disabled: Boolean
     },
     setup(props, context) {
         const toggle = () => {
-            context.emit('update:value', !props.value)
+          if (props.disabled) return
+          context.emit('update:value', !props.value)
         }
         return {
             toggle
@@ -21,7 +22,7 @@ export default {
 }
 </script>
 
-<style lang="scss"> 
+<style lang="scss">
     $h: 22px;
     $h2: $h - 4px;
     .azan-switch{
@@ -55,6 +56,6 @@ export default {
             background:white;
             border-radius: $h2 / 2;
             transition: all 250ms;
-        } 
+        }
     }
 </style>

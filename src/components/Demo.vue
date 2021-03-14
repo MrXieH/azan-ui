@@ -11,7 +11,9 @@
   <div class="demo-code" v-if="codeVisible">
     <pre class="language-html" v-html="html" />
   </div>
-
+  <div class="tips" v-html="component.__tips" v-if="codeVisible && component.__tips">
+<!--    {{ component.__tips }}-->
+  </div>
 </div>
 </template>
 
@@ -71,6 +73,9 @@ $border-color: #d9d9d9;
       font-family: Consolas, 'Courier New', Courier, monospace;
       margin: 0;
     }
+  }
+  .tips {
+    padding: 20px;
   }
 }
 </style>

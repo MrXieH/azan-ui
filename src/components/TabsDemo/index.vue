@@ -1,16 +1,22 @@
 <template>
-$END$
+  <div>
+    <h1>Tabs 组件示例 </h1>
+    <Demo :component="TabsDemo1" />
+  </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { Component } from 'vue-property-decorator'
-@Component
+import Demo from '../Demo.vue'
+import TabsDemo1 from './TabsDemo1.vue'
 export default {
-name: "index"
+  setup() {
+    return {
+      TabsDemo1,
+      Demo
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-
 </style>

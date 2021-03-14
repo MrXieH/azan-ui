@@ -63,7 +63,7 @@ export default {
     padding-top: 60px;
     padding-left: 156px;
     @media (max-width: 500px) {
-      padding-left: 0; 
+      padding-left: 0;
     }
   }
 }
@@ -79,28 +79,34 @@ export default {
   }
 }
 aside {
-  background: lightblue;
   width: 150px;
-  padding: 16px 0;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
-  padding-top: 70px;
-  height: 100%;
+  padding: 70px 0 16px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 #ccc;
   > h2 {
-    margin-bottom: 4px;
+    margin: 12px 0;
     padding: 0 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
   }
   > ol {
     > li {
       >a {
         display: block;
-        padding: 4px  16px;
+        padding: 8px 16px;
+        font-size: 14px;
+        color: #666;
       }
       .router-link-active {
         display: block;
         text-decoration: none;
+        color: #0d92ff;
         background: #fff;
       }
     }
@@ -109,4 +115,4 @@ aside {
     overflow: auto;
   }
 }
-</style> 
+</style>
