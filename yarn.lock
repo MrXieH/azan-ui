@@ -476,6 +476,18 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.10.1.tgz?cache=0&sync_timestamp=1597237056174&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faws4%2Fdownload%2Faws4-1.10.1.tgz#e1e82e4f3e999e2cfd61b161280d16a111f86428"
   integrity sha1-4eguTz6Zniz9YbFhKA0WoRH4ZCg=
 
+azan-ui@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/azan-ui/-/azan-ui-0.0.2.tgz#ab948456c85aa41ea776e2c3c39d5c4ecbbb1ec5"
+  integrity sha512-Ago+Gcad9VKKlAqccNWM06k/beqlOwKIm0/EQPK8uCXSp1NJdIwlxckZRV1+Ebroo2ExIlYOBmDF5A7rYXxPUA==
+  dependencies:
+    github-markdown-css "^4.0.0"
+    global "^4.4.0"
+    marked "^1.2.0"
+    prismjs "^1.22.0"
+    vue "^3.0.0-rc.1"
+    vue-router "4.0.0-beta.3"
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/balanced-match/download/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"

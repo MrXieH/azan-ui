@@ -11,7 +11,7 @@ export default {
       vue: 'Vue'
     },
     name: 'azan',
-    file: 'dist/lib/azan.js',
+    file: 'package/lib/azan.js',
     format: 'umd',
     plugins: [terser()]
   },

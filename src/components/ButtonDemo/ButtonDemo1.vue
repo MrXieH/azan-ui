@@ -10,10 +10,11 @@
 theme属性支持: button(默认)、link、text
 </tips>
 <script lang="ts">
-import Button from '../../lib/Button/Button.vue'
+import { Button } from 'azan-ui'
+// import Button from '../../lib/Button/Button.vue'
 export default {
   components: {
     Button
   }
-}
+} 
 </script>

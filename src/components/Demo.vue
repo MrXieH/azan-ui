@@ -11,8 +11,8 @@
   <div class="demo-code" v-if="codeVisible">
     <pre class="language-html" v-html="html" />
   </div>
-  <div class="tips" v-html="component.__tips" v-if="codeVisible && component.__tips">
-<!--    {{ component.__tips }}-->
+  <div class="tips" v-if="codeVisible && component.__tips">
+    <div v-html="component.__tips"></div>
   </div>
 </div>
 </template>
