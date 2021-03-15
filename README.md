@@ -1,6 +1,3 @@
-1. 运行 yarn
-2. 运行 yarn build
-3. 得到的 dist 目录就是官网源代码
-4. 编辑并运行 sh deploy.sh 就可以上传到 Github 或码云等支持 Pages 功能的平台
-
-## 库文件打包步骤
+# azan-ui 基于vue3 + typescript的UI框架
+## 个人无聊时编写，不建议在生产环境中使用
+预览
