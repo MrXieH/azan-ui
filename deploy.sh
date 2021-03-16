@@ -12,4 +12,4 @@ git remote add originGitee git@gitee.com:MrXieH/azan-ui-website.git
 git push -f -u originGitee master
 git@gitee.com:MrXieH/azan-ui-website.git
 cd -
-echo https://mrxieh.github.io/azan-ui-website/index.html
+echo https://mrxieh.gitee.io/azan-ui-website/

@@ -1,6 +1,6 @@
 {
   "name": "azan-ui",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "files": [
     "package/lib/*"
   ],

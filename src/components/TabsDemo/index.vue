@@ -16,14 +16,28 @@ export default {
   },
   setup() {
     const attributes: Attributes = [
-        {
-          key: 'selected',
-          remark: '当前显示的tab title',
-          type: 'string',
-          values: ['-'],
-          defaultValue: '-'
-        }
-      ]
+      {
+        key: 'selected',
+        remark: '当前显示的tab title',
+        type: 'string',
+        values: ['-'],
+        defaultValue: '-'
+      },
+      {
+        key: 'tab-item',
+        remark: 'tab组件',
+        type: 'component',
+        values: ['tab-item'],
+        defaultValue: '-'
+      },
+      {
+        key: 'tab-item title',
+        remark: 'tab-item 接收 title',
+        type: 'string',
+        values: ['-'],
+        defaultValue: '-'
+      }
+    ]
     return {
       TabsDemo1,
       Demo,
