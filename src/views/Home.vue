@@ -6,7 +6,7 @@
         <h1 class="name">azan UI</h1>
         <h2 class="desc">一个基于vue3 + typescript的简易UI框架</h2>
         <p class="actions">
-          <a href="https://github.com">GitHub</a>
+          <a href="https://github.com/MrXieH/azan-ui">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>
