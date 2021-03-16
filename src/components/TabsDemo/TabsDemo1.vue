@@ -3,8 +3,8 @@
 </demo>
 <template>
   <Tabs v-model:selected="current">
-    <Tab title="导航1">内容1</Tab>
-    <Tab title="导航2">内容2</Tab>
+    <Tab title="tab1">content1</Tab>
+    <Tab title="tab2">content2</Tab>
   </Tabs>
 </template>
 <script lang="ts">
@@ -17,7 +17,7 @@ export default {
     Tab
   },
   setup() {
-    const current = ref('导航1')
+    const current = ref('tab1')
     return {
       current
     }

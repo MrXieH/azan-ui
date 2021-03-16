@@ -14,15 +14,11 @@ export default {
     props: {
         theme: {
             type: String,
-            default: 'button'
+            default: 'default'
         },
         size: {
             type: String,
             default: 'normal'
-        },
-        level: {
-            type: String,
-            default: "normal",
         },
         disabled: {
             type: Boolean,
@@ -52,11 +48,10 @@ export default {
 <style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
-$color: #333;
-$blue: #40a9ff;
+$color: rgba(0,0,0,.65);
+$blue: #1890ff;
 $radius: 4px;
 $red: red;
-$grey: grey;
 .azan-button {
   box-sizing: border-box;
   height: $h;
@@ -71,20 +66,35 @@ $grey: grey;
   border: 1px solid $border-color;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
-  transition: background 250ms;
+  transition: all 250ms;
+  font-size: 14px;
   & + & {
     margin-left: 8px;
-  }
-  &:hover,
-  &:focus {
-    color: $blue;
-    border-color: $blue;
   }
   &:focus {
     outline: none;
   }
   &::-moz-focus-inner {
     border: 0;
+  }
+  &.azan-theme-default {
+    &:hover,
+    &:focus {
+      color: $blue;
+      border-color: $blue;
+    }
+  }
+  &.azan-theme-primary {
+    background: $blue;
+    border-color: $blue;
+    box-shadow: none;
+    color: #fff;
+  }
+  &.azan-theme-danger {
+    background: $red;
+    border-color: $red;
+    box-shadow: none;
+    color: #fff;
   }
   &.azan-theme-link {
     border-color: transparent;
@@ -105,80 +115,27 @@ $grey: grey;
     }
   }
   &.azan-size-big {
-    font-size: 24px;
-    height: 48px;
-    padding: 0 16px;
+    font-size: 16px;
+    height: 40px;
+    padding: 0 15px;
   }
   &.azan-size-small {
-    font-size: 12px;
-    height: 20px;
-    padding: 0 4px;
+    height: 24px;
+    padding: 0 7px;
   }
-  &.azan-theme-button {
-    &.azan-level-main {
-      background: $blue;
-      color: white;
-      border-color: $blue;
-      &:hover,
-      &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
-      }
-    }
-    &.azan-level-danger {
-      background: $red;
-      border-color: $red;
-      color: white;
-      &:hover,
-      &:focus {
-        background: darken($red, 10%);
-        border-color: darken($red, 10%);
-      }
-    }
-  }
-  &.azan-theme-link {
-    &.azan-level-danger {
-      color: $red;
-      &:hover,
-      &:focus {
-        color: darken($red, 10%);
-      }
-    }
-  }
-  &.azan-theme-text {
-    &.azan-level-main {
-      color: $blue;
-      &:hover,
-      &:focus {
-        color: darken($blue, 10%);
-      }
-    }
-    &.azan-level-danger {
-      color: $red;
-      &:hover,
-      &:focus {
-        color: darken($red, 10%);
-      }
-    }
-  }
-  &.azan-theme-button {
-    &[disabled] {
-      cursor: not-allowed;
-      color: $grey;
-      &:hover {
-        border-color: $grey;
-      }
-    }
-  }
-  &.azan-theme-link, &.azan-theme-text {
-    &[disabled] {
-      cursor: not-allowed;
-      color: $grey;
+  &[disabled] {
+    cursor: not-allowed;
+    color: $color;
+    background: #f5f5f5;
+    border-color: #d9d9d9;
+    &:hover {
+      color: $color;
+      border-color: #d9d9d9;
     }
   }
   > .azan-loadingIndicator{
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     display: inline-block;
     margin-right: 4px;
     border-radius: 8px;

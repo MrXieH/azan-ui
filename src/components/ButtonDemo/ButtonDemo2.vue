@@ -6,9 +6,6 @@
     <Button size="big">大按钮</Button>
   </div>
 </template>
-<tips>
-size属性支持: normal(默认)、small、big
-</tips>
 <script lang="ts">
 import Button from '../../lib/Button/Button.vue'
 export default {

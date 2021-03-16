@@ -4,7 +4,6 @@
     <Demo :component="ButtonDemo1" />
     <Demo :component="ButtonDemo2" />
     <Demo :component="ButtonDemo3" />
-    <Demo :component="ButtonDemo4" />
     <Attributes :attributes="attributes"/>
   </div>
 </template>
@@ -14,7 +13,6 @@ import Demo from '../Demo.vue';
 import ButtonDemo1 from "./ButtonDemo1.vue";
 import ButtonDemo2 from "./ButtonDemo2.vue";
 import ButtonDemo3 from "./ButtonDemo3.vue";
-import ButtonDemo4 from "./ButtonDemo4.vue";
 import Attributes from "../Attributes.vue";
 export default {
   components: {
@@ -23,8 +21,29 @@ export default {
   setup() {
     const attributes: Attributes = [
       {
-        key: 'value',
-        remark: '是否开关',
+        key: 'theme',
+        remark: '按钮类型',
+        type: 'string',
+        values: ['default', 'primary', 'danger', 'link', 'text'],
+        defaultValue: 'default'
+      },
+      {
+        key: 'size',
+        remark: '按钮尺寸',
+        type: 'string',
+        values: ['normal', 'small', 'big'],
+        defaultValue: 'normal'
+      },
+      {
+        key: 'disabled',
+        remark: '是否禁用',
+        type: 'boolean',
+        values: ['true', 'false'],
+        defaultValue: 'false'
+      },
+      {
+        key: 'loading',
+        remark: '是否显示加载',
         type: 'boolean',
         values: ['true', 'false'],
         defaultValue: 'false'
@@ -34,7 +53,6 @@ export default {
       ButtonDemo1,
       ButtonDemo2,
       ButtonDemo3,
-      ButtonDemo4,
       Demo,
       attributes
     }

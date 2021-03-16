@@ -1,15 +1,8 @@
-<demo>不同等级</demo>
+<demo>不同形态</demo>
 <template>
-  <div>
-    <Button>默认状态</Button>
-    <Button level="main">主要状态</Button>
-    <Button level="danger">危险状态</Button>
-    <Button theme="text" level="danger">文字按钮的危险状态</Button>
-  </div>
+  <Button loading>加载中</Button>
+  <Button disabled>禁用</Button>
 </template>
-<tips>
-level属性支持: normal(默认)、main、danger
-</tips>
 <script lang="ts">
 import Button from '../../lib/Button/Button.vue'
 export default {

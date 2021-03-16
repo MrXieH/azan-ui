@@ -32,24 +32,6 @@ export default {
       type: Array as PropType<Attributes>,
       default: () => []
     }
-  },
-  setup() {
-    const attributes: Attributes = [
-      {
-        key: 'value',
-        remark: '是否开关',
-        type: 'boolean',
-        values: ['true', 'false'],
-        defaultValue: 'false'
-      },
-      {
-        key: 'disabled',
-        remark: '是否禁用',
-        type: 'boolean',
-        values: ['true', 'false'],
-        defaultValue: 'false'
-      }
-    ]
   }
 }
 </script>
