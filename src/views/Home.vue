@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div class="topnavAndBanner">
-      <Topnav />
       <div class="banner">
-        <h1>azan UI</h1>
-        <h2>一个厉害的 UI 框架</h2>
+        <img src="../assets/azan-logo.png" alt="logo" class="logo">
+        <h1 class="name">azan UI</h1>
+        <h2 class="desc">一个基于vue3 + typescript的简易UI框架</h2>
         <p class="actions">
           <a href="https://github.com">GitHub</a>
           <router-link to="/doc">开始</router-link>
@@ -16,12 +16,12 @@
         <li>
           <IconSvg icon="vue" />
           <h3>基于 Vue 3</h3>
-          <p>骄傲地使用了 Vue 3 Composition API</p>
+          <p>使用了 Vue 3 Composition API</p>
         </li>
         <li>
           <IconSvg icon="typescript" />
           <h3>基于 TypeScript </h3>
-          <p>源代码采用 TypeScript 书写（非严格检查）</p>
+          <p>源代码采用 TypeScript 书写</p>
         </li>
         <li>
           <IconSvg icon="light" />
@@ -39,22 +39,25 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$green: #02bcb0;
+$green: #0170fe;
 $border-radius: 4px;
-$color: #007974;
+$color: #0170fe;
 .topnavAndBanner {
   clip-path: ellipse(80% 60% at 50% 40%);
-  background: linear-gradient(90deg, rgba(36,240,229,1) 0%, rgba(39,231,230,1) 100%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, #f3f6fd 0%, #f1f6ff 100%);
 }
 .banner {
-  padding: 100px 0;
+  padding: 100px 20px 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // background: lightgreen;
   color: $color;
+  .name, .desc {
+    margin: 10px 0;
+  }
   > .actions{
+    margin-top: 20px;
     padding: 8px 0;
     a {
       margin:0 8px;
@@ -72,7 +75,10 @@ $color: #007974;
 .features {
   margin: 64px auto;
   width: 400px;
-  @media (min-white: 800px) {
+  @media (max-width: 400px) {
+    width: auto;
+  }
+  @media (min-width: 800px) {
     width: 800px;
   }
   @media (min-width: 1200px) {
@@ -87,7 +93,7 @@ $color: #007974;
       display: grid;
       justify-content: start;
       align-content: space-between;
-      grid-template-areas: 
+      grid-template-areas:
         "icon title"
         "icon text";
       grid-template-columns: 80px auto;
@@ -105,6 +111,6 @@ $color: #007974;
         grid-area: text;
       }
     }
-  } 
+  }
 }
 </style>

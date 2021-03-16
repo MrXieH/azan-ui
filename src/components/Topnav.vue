@@ -1,7 +1,8 @@
 <template>
   <div class="topnav">
     <router-link to="/" class="logo">
-      <IconSvg icon="boom" />
+      <img src="../assets/azan-logo.png" alt="logo">
+<!--      <IconSvg icon="boom" />-->
     </router-link>
     <ul class="menu">
       <li><router-link to="/doc">文档</router-link></li>
@@ -32,22 +33,27 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-$color: #007974;
+$themeColor: #1890ff;
 .topnav {
-  // background: pink;
   display: flex;
-  padding: 16px;
+  padding: 12px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  height: 80px;
+  z-index: 40;
   justify-content: center;
   align-items: center;
-  color: $color;
+  box-shadow: 0 5px 5px rgb(51 51 51 / 10%);
+  color: $themeColor;
+  background: #fff;
   > .logo {
-    max-width: 6em;
+    height: 100%;
     margin-right: auto;
+    img {
+      height: 100%;
+    }
   }
   > .menu {
     display: flex;

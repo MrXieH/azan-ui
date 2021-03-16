@@ -20,10 +20,10 @@ export default {
     esbuild({
       include: /\.[jt]s$/,
       minify: process.env.NODE_ENV === 'production',
-      target: 'es2015' 
+      target: 'es2016'
     }),
     vue({
       include: /\.vue$/,
     })
   ],
-} 
+}
